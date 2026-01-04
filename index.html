@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sadman</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="userInput" placeholder="Enter Your Name">
+        <button id="enterBtn">Enter</button>
+        <audio id="audio" src="audio.mp3"></audio>
+    </div>
+    <script>
+        document.getElementById('enterBtn').addEventListener('click', function() {
+            var audio = document.getElementById('audio');
+            audio.play();
+            
+            // ইনপুটের মান যাচাই করার পর দ্বিতীয় পেজে রিডাইরেক্ট
+            audio.onended = function() {
+                window.location.href = "page2.html";
+            };
+        });
+    </script>
+</body>
+</html>
